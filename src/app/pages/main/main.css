@@ -1,0 +1,54 @@
+/* General Styles */
+section {
+  padding: 12rem 0;
+  width: 100%;
+}
+
+.headline-p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.headline-text {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.06rem;
+  margin-bottom: 9.6rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--main-background-green);
+}
+
+.hero-container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+}
+
+.title {
+  font-size: 6.4rem;
+  font-weight: 550;
+  margin-bottom: 2.4rem;
+  letter-spacing: -0.08rem;
+}
+
+.right-secure {
+  color: var(--main-accent-green);
+}
+
+
+.hero-picture img {
+  width: 56rem;
+  height: auto;
+  filter: drop-shadow(0.6rem 0.8rem 0.8rem var(--shadow-color));
+  border-radius: 1.2rem;
+}

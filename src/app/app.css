@@ -1,0 +1,109 @@
+/* App Container */
+.app-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 12rem;
+  background-color: var(--main-dark-blue);
+  color: var(--main-text-color-light);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  height: 12rem;
+  width: 12em;
+}
+
+/* Navbar */
+.main-nav-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  list-style: none;
+}
+
+.main-nav-link-button {
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--main-text-color-grey);
+  text-decoration: none;
+  border: none;
+  background-color: var(--main-background-white);
+  transition: all 0.3s;
+}
+
+.main-nav-link-button:hover {
+  color: var(--accent-blue);
+}
+
+.main-nav-link-button:active {
+  color: var(--accent-blue-active);
+}
+
+.main-nav-link-button.cta-link {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 550;
+  color: var(--main-text-color-light);
+  text-decoration: none;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: var(--main-accent-green);
+  padding: 1.6rem 2.4rem;
+  box-shadow: 0rem 0.2rem 0.2rem 0.2rem var(--blue-shadow-color);
+}
+
+.main-nav-link-button.cta-link:hover {
+  background-color: var(--accent-blue-hover);
+}
+
+.main-nav-link-button.cta-link:active {
+  background-color: var(--accent-blue-active);
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.menu-button:hover {
+  opacity: 0.8;
+}
+
+.menu-button:active {
+  opacity: 0.6;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
