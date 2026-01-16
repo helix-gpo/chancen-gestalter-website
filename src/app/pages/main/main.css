@@ -20,11 +20,9 @@ section {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(
-    to bottom right,
-    var(--main-background-green) 50%,
-    var(--main-background-white) 95%
-  );
+  background: linear-gradient(to bottom right,
+      var(--main-background-green) 50%,
+      var(--main-background-white) 95%);
 }
 
 .hero-container {
@@ -197,11 +195,9 @@ section {
 }
 
 .card {
-  background: linear-gradient(
-    to bottom right,
-    var(--main-background-green) 50%,
-    var(--main-background-white) 80%
-  );
+  background: linear-gradient(to bottom right,
+      var(--main-background-green) 50%,
+      var(--main-background-white) 80%);
   padding: 3.2rem;
   border: 1px solid var(--main-border-color);
   border-radius: 1.2rem;
@@ -305,7 +301,7 @@ section {
 
 .working-steps {
   width: 100%;
-  
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3.2rem;
@@ -371,7 +367,7 @@ section {
 
 .step:hover {
   cursor: pointer;
-  box-shadow: 
+  box-shadow:
     0rem 0.6rem 0.8rem 0.02rem var(--white-shadow-color),
     inset 0 0 0 2px var(--main-accent-green);
 }
@@ -580,8 +576,249 @@ section {
 .now-contact-button:hover {
   cursor: pointer;
   background-color: var(--main-accent-green-hover);
-} 
+}
 
 .now-contact-button:active {
+  background-color: var(--main-accent-green-active);
+}
+
+
+/* CTA */
+.contact-section {
+  background-color: var(--main-accent-green);
+  color: var(--main-text-color-dark);
+}
+
+.contact-container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  width: 100%;
+  background-color: var();
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.contact-headline {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--main-text-color-light);
+}
+
+.contact-description {
+  font-size: 1.8rem;
+  color: var(--main-text-color-light);
+  line-height: 1.4;
+}
+
+.contact-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.contact-buttons button {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.6rem 2.4rem;
+  border-radius: 1.2rem;
+  transition: all 0.3s;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.cta-button {
+  color: var(--main-accent-green);
+  border: none;
+  box-shadow: 0rem 0.6rem 0.8rem 0.02rem var(--green-shadow-color);
+}
+
+.cta-button:hover {
+  background-color: var(--main-white-hover);
+  cursor: pointer;
+  box-shadow: 0rem 0.6rem 0.8rem 0.2rem var(--green-shadow-color);
+}
+
+.cta-button:active {
+  background-color: var(--main-white-active);
+}
+
+.email-button {
+  color: var(--main-text-color-light);
+  background-color: var(--main-accent-green);
+  border: none;
+  box-shadow:
+    0rem 0.6rem 0.8rem 0.02rem var(--green-shadow-color),
+    inset 0 0 0 2px var(--main-background-white);
+}
+
+.email-button:hover {
+  background-color: var(--main-accent-green-hover);
+  cursor: pointer;
+  box-shadow:
+    0rem 0.6rem 0.8rem 0.2rem var(--green-shadow-color),
+    inset 0 0 0 2px var(--main-background-white);
+}
+
+.email-button:active {
+  background-color: var(--main-accent-green-active);
+}
+
+.info-icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  background-color: var(--contact-icon-green);
+  border-radius: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.info-angabe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.info-head {
+  font-size: 1.4rem;
+  color: var(--contact-text-color-green);
+}
+
+.info-body {
+  font-size: 1.6rem;
+  color: var(--main-text-color-light);
+}
+
+.contact-form {
+  padding: 3.2rem 2.4rem;
+  background-color: var(--main-background-white);
+  border-radius: 1.2rem;
+}
+
+.contact-form .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.contact-icon-container {
+  height: 8rem;
+  width: 8rem;
+  background-color: var(--main-background-green);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-headline {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.form-text {
+  color: var(--main-text-color-grey);
+  font-size: 1.4rem;
+}
+
+.fields {
+  margin-top: 4rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.field {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.field p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--main-text-color-dark);
+}
+
+.field input,
+.field .dropdown,
+.field textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.6rem;
+  padding: 1.2rem 1.6rem;
+  border: 2px solid var(--second-background-green);
+  border-radius: 1.2rem;
+  transition: all 0.3s;
+}
+
+.field input:focus,
+.field .dropdown:focus,
+.field textarea:focus {
+  outline: #fff;
+  border-color: var(--main-accent-green);
+}
+
+.field textarea {
+  height: 9.6rem;
+}
+
+.form-button {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--main-text-color-light);
+  padding: 1.6rem 2.4rem;
+  border-radius: 1.2rem;
+  transition: all 0.3s;
+  border: none;
+  background-color: var(--main-accent-green);
+  box-shadow: 0rem 0.2rem 0.6rem 0.02rem var(--green-shadow-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.form-button:hover {
+  background-color: var(--main-accent-green-hover);
+  cursor: pointer;
+  box-shadow: 0rem 0.2rem 0.6rem 0.2rem var(--green-shadow-color);
+}
+
+.form-button:active {
   background-color: var(--main-accent-green-active);
 }
