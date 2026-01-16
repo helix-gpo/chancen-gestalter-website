@@ -71,11 +71,26 @@ input {
 }
 
 :root {
-  --main-accent-yellow: #fae103;
+  --main-accent-yellow: #ffd700;
   --main-accent-green: #85a955;
   --main-background-white: #fff;
   --main-background-green: #f0f5eb;
+  --second-background-green: #d4e5cd;
 
   --main-text-color-light: #fff;
   --main-text-color-grey: #333;
+  --main-text-color-dark: #1b2211;
+
+  --dark-text-hover: #78984d;
+  --dark-text-active: #85a955;
+
+  --main-border-color: #ced3ca;
+
+  --white-shadow-color: #b3b3b3;
+  --main-white-hover: #e7eedd;
+  --main-white-active: #dae5cc;
+
+  --green-shadow-color: #506533;
+  --main-accent-green-hover: #78984d;
+  --main-accent-green-active: #6a8744;
 }

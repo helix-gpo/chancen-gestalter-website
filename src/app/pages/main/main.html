@@ -1,31 +1,396 @@
 <section class="hero-section" id="hero">
-	<div class="hero-container">
-		<div class="hero-text">
-			<div class="overhead">
-				<app-icon
-          [iconName]="'document_search'"
-          [iconColor]="'#03dbff'"
-          [iconSize]="'4rem'"
-          class="step-icon"
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="overhead">
+        <app-icon
+          [iconName]="'check_circle'"
+          [iconColor]="'#85a955'"
+          [iconSize]="'1.6rem'"
+          class="overhead-icon"
         ></app-icon>
-				<p>Rechtssichere Vermittlung</p>
-			</div>
-			<p class="title">Internationale Fachkräfte <span class="right-secure">rechtssicher</span> nach Deutschland vermitteln</p>
-			<p class="description">
-				ChancenGestalter begleitet Unternehmen und qualifizierte Fachkräfte strukturiert von der Auswahl über
-				das Matching bis zur erfolgreichen Arbeitsaufnahme in Deutschland.
-			</p>
-			<div class="button-links">
-				<button class="button-link starten-link">
-					Jetzt Starten
-				</button>
-				<button class="button-link info-link">
-					Mehr Erfahren
-				</button>
-			</div>
-		</div>
-		<div class="hero-picture">
-			<img class="hero-image" src="/images/hero-pic.png" alt="Helix GPO Hero Image" />
-		</div>
-	</div>
+        <span class="overhead-text">Rechtssichere Vermittlung</span>
+      </div>
+      <p class="title">
+        Internationale Fachkräfte <span class="right-secure">rechtssicher</span> nach Deutschland
+        vermitteln
+      </p>
+      <p class="description">
+        ChancenGestalter begleitet Unternehmen und qualifizierte Fachkräfte strukturiert von der
+        Auswahl über das Matching bis zur erfolgreichen Arbeitsaufnahme in Deutschland.
+      </p>
+      <div class="button-links">
+        <button class="button-link starten-link">Kostenloses Beratungsgespräch</button>
+        <button class="button-link info-link">Mehr Erfahren</button>
+      </div>
+      <div class="values">
+        <div class="top">
+          <app-icon
+            [iconName]="'verified_user'"
+            [iconColor]="'#85a955'"
+            [iconSize]="'2.4rem'"
+            class="values-icon"
+          ></app-icon>
+          <p>Transparent, professionell und gesetzeskonform</p>
+        </div>
+        <div class="bottom">
+          <div class="security">
+            <app-icon
+              [iconName]="'person_shield'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'4.8rem'"
+              class="values-icon"
+            ></app-icon>
+            <p>Rechtskonform</p>
+          </div>
+          <div class="international">
+            <app-icon
+              [iconName]="'language'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'4.8rem'"
+              class="values-icon"
+            ></app-icon>
+            <p>International</p>
+          </div>
+          <div class="personal">
+            <app-icon
+              [iconName]="'group'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'4.8rem'"
+              class="values-icon"
+            ></app-icon>
+            <p>Persönlich</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-picture">
+      <img class="hero-image" src="/images/hero-pic.png" alt="Helix GPO Hero Image" />
+    </div>
+  </div>
+</section>
+
+<section class="leistung-section" id="leistung">
+  <div class="leistung-container">
+    <p class="headline-p">Unsere Leistungen</p>
+    <h1 class="headline-text">
+      Wir bieten maßgeschneiderte Lösungen für Unternehmen und Fachkräfte
+    </h1>
+    <div class="offers">
+      <div class="card left">
+        <div class="icon-container">
+          <app-icon
+            [iconName]="'location_city'"
+            [iconColor]="'#fff'"
+            [iconSize]="'4rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+        <h2 class="card-title">Für Unternehmen</h2>
+        <p class="card-description">
+          Wir unterstützen Sie bei der Gewinnung qualifizierter internationaler Arbeitskräfte und
+          übernehmen den gesamten Vermittlungsprozess.
+        </p>
+        <ul>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Bedarfsanalyse und Anforderungsprofil</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Internationale Kanidatensuche</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Begleitung bei Visum und Behörden</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Integration und Onboarding-Support</p>
+          </li>
+        </ul>
+        <div class="request">
+          <p>Jetzt anfragen</p>
+          <app-icon
+            [iconName]="'arrow_right_alt'"
+            [iconColor]="'#85a955'"
+            [iconSize]="'2.8rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+      </div>
+      <div class="card right">
+        <div class="icon-container">
+          <app-icon
+            [iconName]="'group'"
+            [iconColor]="'#1b2211'"
+            [iconSize]="'4rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+        <h2 class="card-title">Für Fachkräfte</h2>
+        <p class="card-description">
+          Wir begleiten Sie Schritt für Schritt auf Ihrem Weg zu einer qualifizierten Beschäftigung
+          in Deutschland.
+        </p>
+        <ul>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Qualifikationsprüfung und Anerkennung</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Matching mit passenden Arbeitgebern</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Unterstützung im Visumverfahren</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Beratung zu Einreise und Wohnungssuche</p>
+          </li>
+        </ul>
+        <div class="request">
+          <p>Jetzt bewerben</p>
+          <app-icon
+            [iconName]="'arrow_right_alt'"
+            [iconColor]="'#ffd700'"
+            [iconSize]="'2.8rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="working-section" id="working">
+  <div class="working-container">
+    <p class="headline-p">So funktioniert die Zusammenarbeit</p>
+    <h1 class="headline-text">
+      Ein strukturierter Prozess von der Anfrage bis zur erfolgreichen Arbeitsaufnahme
+    </h1>
+    <div class="working-steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <div class="step-content">
+          <span class="step-icon">
+            <app-icon
+              [iconName]="'forum'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'3.6rem'"
+              class="overhead-icon"
+            ></app-icon>
+          </span>
+          <p class="step-title">Erstgespräch</p>
+          <p class="step-description">
+            Kostenlose Beratung zu Ihren Anforderungen, Zielen und dem weiteren Vorgehen.
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <div class="step-content">
+          <span class="step-icon">
+            <app-icon
+              [iconName]="'search'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'3.6rem'"
+              class="overhead-icon"
+            ></app-icon>
+          </span>
+          <p class="step-title">Auswahl & Matching</p>
+          <p class="step-description">
+            Gezielte Suche und Prüfung von Kandidaten anhand Ihrer Anforderungen.
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <div class="step-content">
+          <span class="step-icon">
+            <app-icon
+              [iconName]="'contract'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'3.6rem'"
+              class="overhead-icon"
+            ></app-icon>
+          </span>
+          <p class="step-title">Rechtliche Prüfung</p>
+          <p class="step-description">
+            Qualifikationsanerkennung, Visumsberatung und behördliche Begleitung.
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-number">4</span>
+        <div class="step-content">
+          <span class="step-icon">
+            <app-icon
+              [iconName]="'handshake'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'3.6rem'"
+              class="overhead-icon"
+            ></app-icon>
+          </span>
+          <p class="step-title">Arbeitsaufnahme</p>
+          <p class="step-description">
+            Unterstützung bei Einreise, Integration und erfolgreicher Arbeitsaufnahme.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="start-process-container">
+      <button class="start-process">
+        <span>Prozess starten</span>
+        <app-icon
+          [iconName]="'arrow_right_alt'"
+          [iconColor]="'#fff'"
+          [iconSize]="'2.8rem'"
+          class="overhead-icon"
+        ></app-icon>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="vermittlung-section" id="vermittlung">
+  <div class="vermittlung-container">
+    <div class="vermittlung-picture">
+      <img class="vermittlung-image" src="/images/vermittlung.png" alt="Helix GPO Hero Image" />
+      <div class="garant-secure">
+        <span class="garant-icon">
+          <app-icon
+            [iconName]="'verified_user'"
+            [iconColor]="'#fff'"
+            [iconSize]="'3.2rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </span>
+        <div class="garant-text">
+          <p class="gar">Garantiert</p>
+          <p class="sec">Rechtssicher</p>
+        </div>
+      </div>
+    </div>
+    <div class="vermittlung-text">
+      <div class="overhead">
+        <app-icon
+          [iconName]="'balance'"
+          [iconColor]="'#85a955'"
+          [iconSize]="'1.8rem'"
+          class="overhead-icon"
+        ></app-icon>
+        <span class="overhead-text">Transparenz & Compliance</span>
+      </div>
+      <p class="title">Rechtssichere und transparente Vermittlung</p>
+      <p class="description">
+        Als professioneller Vermittlungspartner legen wir größten Wert auf gesetzeskonforme
+        Prozesse, Transparenz und Vertrauen. Alle Schritte erfolgen nach deutschem Recht und
+        internationalen Standards.
+      </p>
+      <div class="points">
+        <div class="point">
+          <span class="point-icon">
+            <app-icon
+              [iconName]="'gavel'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'2.8rem'"
+              class="overhead-icon"
+            ></app-icon>
+          </span>
+          <div class="point-text">
+            <p class="point-headline">Gesetzeskonform</p>
+            <p class="point-description">
+              Alle Vermittlungen erfolgen im Einklang mit dem Arbeitnehmerüberlassungsgesetz (AÜG)
+              und dem Fachkräfteeinwanderungsgesetz.
+            </p>
+          </div>
+        </div>
+        <div class="point">
+          <span class="point-icon">
+            <app-icon
+              [iconName]="'inventory'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'2.8rem'"
+              class="overhead-icon"
+            ></app-icon>
+          </span>
+          <div class="point-text">
+            <p class="point-headline">Geprüfte Qualifikationen</p>
+            <p class="point-description">
+              Alle Fachkräfte durchlaufen eine umfassende Qualifikationsprüfung und Anerkennung
+              ihrer Abschlüsse.
+            </p>
+          </div>
+        </div>
+        <div class="point">
+          <span class="point-icon">
+            <app-icon
+              [iconName]="'visibility'"
+              [iconColor]="'#85a955'"
+              [iconSize]="'2.8rem'"
+              class="overhead-icon"
+            ></app-icon>
+          </span>
+          <div class="point-text">
+            <p class="point-headline">Volle Transparenz</p>
+            <p class="point-description">
+              Klare Kommunikation über jeden Schritt, alle Kosten und rechtlichen Rahmenbedingungen
+              von Anfang an.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="now-contact-button">
+        <p>Jetzt Kontakt aufnehmen</p>
+        <app-icon
+          [iconName]="'arrow_right_alt'"
+          [iconColor]="'#fff'"
+          [iconSize]="'2.8rem'"
+          class="overhead-icon"
+        ></app-icon>
+      </button>
+    </div>
+  </div>
 </section>

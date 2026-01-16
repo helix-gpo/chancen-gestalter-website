@@ -13,7 +13,7 @@ export class App {
   private router: Router = inject(Router);
 
   ngOnInit() {
-    this.updateYear();
+    /* this.updateYear(); */
   }
 
   scrollToElementByButton(elementId: string) {
@@ -39,11 +39,11 @@ export class App {
     }
   }
 
-  updateYear() {
+  /* updateYear() {
     const yearEl = document.querySelector('.year');
     const currentYear = new Date().getFullYear();
     if (yearEl) {
       yearEl.innerHTML = String(currentYear);
     }
-  }
+  } */
 }

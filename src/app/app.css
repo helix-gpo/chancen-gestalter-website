@@ -36,15 +36,15 @@
 /* Navbar */
 .main-nav-list {
   display: flex;
-  gap: 2rem;
+  gap: 2.4rem;
   align-items: center;
 
   list-style: none;
 }
 
 .main-nav-link-button {
+  font-family: inherit;
   font-size: 1.6rem;
-  font-weight: 500;
   cursor: pointer;
   color: var(--main-text-color-grey);
   text-decoration: none;
@@ -54,17 +54,17 @@
 }
 
 .main-nav-link-button:hover {
-  color: var(--accent-blue);
+  color: var(--dark-text-hover);
 }
 
 .main-nav-link-button:active {
-  color: var(--accent-blue-active);
+  color: var(--dark-text-active);
 }
 
 .main-nav-link-button.cta-link {
   font-family: inherit;
   font-size: 1.6rem;
-  font-weight: 550;
+  font-weight: 500;
   color: var(--main-text-color-light);
   text-decoration: none;
   border: none;
@@ -73,15 +73,15 @@
   transition: all 0.3s;
   background-color: var(--main-accent-green);
   padding: 1.6rem 2.4rem;
-  box-shadow: 0rem 0.2rem 0.2rem 0.2rem var(--blue-shadow-color);
+  box-shadow: 0rem 0.2rem 0.8rem 0.02rem var(--green-shadow-color);
 }
 
 .main-nav-link-button.cta-link:hover {
-  background-color: var(--accent-blue-hover);
+  background-color: var(--main-accent-green-hover);
 }
 
 .main-nav-link-button.cta-link:active {
-  background-color: var(--accent-blue-active);
+  background-color: var(--main-accent-green-active);
 }
 
 .menu-button {
