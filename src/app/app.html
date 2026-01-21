@@ -7,26 +7,17 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
-            <button
-              class="main-nav-link-button"
-              (click)="scrollToElementByButton('leistung')"
-            >
+            <button class="main-nav-link-button" (click)="scrollToElementByButton('leistung')">
               Leistungen
             </button>
           </li>
           <li>
-            <button
-              class="main-nav-link-button"
-              (click)="scrollToElementByButton('working')"
-            >
+            <button class="main-nav-link-button" (click)="scrollToElementByButton('working')">
               Zusammenarbeit
             </button>
           </li>
           <li>
-            <button
-              class="main-nav-link-button"
-              (click)="scrollToElementByButton('vermittlung')"
-            >
+            <button class="main-nav-link-button" (click)="scrollToElementByButton('vermittlung')">
               Vermittlung
             </button>
           </li>
@@ -48,6 +39,80 @@
   </div>
 
   <footer class="footer">
-    
+    <div class="top-grid">
+      <div>
+        <img class="footer-logo" src="/images/final logo new.png" alt="Chancen Gestalter Logo" />
+        <!-- <p class="footer-description">
+          Professionelle Begleitung bei der rechtssicheren Vermittlung internationaler Fachkräfte
+          nach Deutschland.
+        </p> -->
+      </div>
+      <div>
+        <p class="headline">Navigation</p>
+        <nav>
+          <ul class="footer-nav">
+            <li (click)="scrollToElementByButton('hero')">Start</li>
+            <li (click)="scrollToElementByButton('leistung')">Leistungen</li>
+            <li (click)="scrollToElementByButton('working')">Zusammenarbeit</li>
+            <li (click)="scrollToElementByButton('vermittlung')">Vermittlung</li>
+            <li (click)="scrollToElementByButton('contact')">Kontakt</li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <p class="headline">Leistungen</p>
+        <ul>
+          <li>
+            <app-icon [iconName]="'check'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <p>Für Unternehmen</p>
+          </li>
+          <li>
+            <app-icon [iconName]="'check'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <p>Für Fachkräfte</p>
+          </li>
+          <li>
+            <app-icon [iconName]="'check'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <p>Rechtssichere Vermittlung</p>
+          </li>
+          <li>
+            <app-icon [iconName]="'check'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <p>Integration Support</p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="headline">Kontakt</p>
+        <ul>
+          <li>
+            <app-icon [iconName]="'mail'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <p>info@chancengestalter.de</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'phone_in_talk'"
+              [iconColor]="'#65993E'"
+              [iconSize]="'2.4rem'"
+            ></app-icon>
+            <p>Mo-Fr, 9-17 Uhr</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'location_on'"
+              [iconColor]="'#65993E'"
+              [iconSize]="'2.4rem'"
+            ></app-icon>
+            <p>Deutschland</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Chancen Gestalter GWS UG. Alle Rechte vorbehalten.</p>
+      <div class="contact-links">
+        <p>Datenschutz</p>
+        <p>Impressum</p>
+        <p>Satzung</p>
+      </div>
+    </div>
   </footer>
 </div>

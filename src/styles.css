@@ -75,11 +75,13 @@ input {
   --main-accent-green: #65993E;
   --main-background-white: #fff;
   --main-background-green: #f0f5eb;
+  --main-background-dark: #1E1E1E;
   --second-background-green: #d4e5cd;
 
   --main-text-color-light: #fff;
   --main-text-color-grey: #333;
   --main-text-color-dark: #1b2211;
+  --main-text-color-footer: #a5a5a5;
 
   --dark-text-hover: #74a351;
   --dark-text-active: #65993E;

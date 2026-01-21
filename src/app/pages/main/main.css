@@ -528,6 +528,7 @@ section {
 
 .point-icon {
   background-color: var(--main-background-green);
+  background-color: #fffbe6;
   height: 6rem;
   width: 6rem;
   border-radius: 1.2rem;
@@ -605,7 +606,7 @@ section {
 .contact-text {
   display: flex;
   flex-direction: column;
-  gap: 2.8rem;
+  gap: 4rem;
 }
 
 .contact-headline {
@@ -821,4 +822,16 @@ section {
 
 .form-button:active {
   background-color: var(--main-accent-green-active);
+}
+
+.data-security {
+  margin-top: -0.8rem;
+  font-size: 1.4rem;
+  color: var(--main-text-color-dark);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
 }

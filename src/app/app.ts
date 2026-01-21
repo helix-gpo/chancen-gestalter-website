@@ -1,9 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
+import { Icon } from "./util/icon/icon";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Icon],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
