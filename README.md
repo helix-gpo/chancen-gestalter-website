@@ -1,9 +1,12 @@
 To Do's:
-- Unternehmen & Fachkräfte Vorauswahl auf Klick
-- Die ganzen Texte und Wortlaute austauschen
-- Emails erstellen
-- Email hinterlegen bei 'E-Mail schreiben'
-- Nummer hinterlegen bei 'Kontakt aufnehmen'
-- Nachricht senden ermöglichen
-- Datenschutz & Impressum + Satzung (inklusive Routing)
-- Domain
+
+- Impressum (Vervollständigen - fehlenden Daten: Handlesregister (+ HRB-Nr.), USt-IdNr. oder Kleinunternehmerregelung)
+- (Texte anpassen)
+- Design Breaks für Screen Größen (Für Handy)
+- Kontaktformular n8n
+- Hosting
+- Hosting mit Domain
+
+Informationen: (Warten auf Hanna's Antwort)
+
+- Erreichbarkeit (contact)

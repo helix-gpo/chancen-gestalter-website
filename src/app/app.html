@@ -8,11 +8,19 @@
         <ul class="main-nav-list">
           <li>
             <button class="main-nav-link-button" (click)="scrollToElementByButton('leistung')">
-              Leistungen
+              Leistungsbereiche
             </button>
           </li>
           <li>
             <button class="main-nav-link-button" (click)="scrollToElementByButton('working')">
+              Über Uns
+            </button>
+          </li>
+          <li>
+            <button
+              class="main-nav-link-button"
+              (click)="scrollToElementByButton('zusammenarbeit')"
+            >
               Zusammenarbeit
             </button>
           </li>
@@ -22,15 +30,23 @@
             </button>
           </li>
           <li>
+            <button class="main-nav-link-button" (click)="scrollToElementByButton('questions')">
+              Q&A
+            </button>
+          </li>
+          <li>
             <button
               class="main-nav-link-button cta-link"
               (click)="scrollToElementByButton('contact')"
             >
-              Jetzt Kontakt aufnehmen
+              Kontakt aufnehmen
             </button>
           </li>
         </ul>
       </nav>
+      <button class="menu-button" (click)="handleMenuButtonClick()">
+        <app-icon [iconName]="'menu'" [iconColor]="'#1e1e1e'" [iconSize]="'4rem'"></app-icon>
+      </button>
     </div>
   </header>
 
@@ -40,42 +56,42 @@
 
   <footer class="footer">
     <div class="top-grid">
-      <div>
+      <div class="logo-container">
         <img class="footer-logo" src="/images/final logo new.png" alt="Chancen Gestalter Logo" />
-        <!-- <p class="footer-description">
-          Professionelle Begleitung bei der rechtssicheren Vermittlung internationaler Fachkräfte
-          nach Deutschland.
-        </p> -->
       </div>
-      <div>
+      <div class="grid-nav">
         <p class="headline">Navigation</p>
-        <nav>
+        <nav class="f-nav">
           <ul class="footer-nav">
             <li (click)="scrollToElementByButton('hero')">Start</li>
-            <li (click)="scrollToElementByButton('leistung')">Leistungen</li>
-            <li (click)="scrollToElementByButton('working')">Zusammenarbeit</li>
+            <li (click)="scrollToElementByButton('leistung')">Leistungsbereiche</li>
+            <li (click)="scrollToElementByButton('working')">Über Uns</li>
+            <li (click)="scrollToElementByButton('zusammenarbeit')">Zusammenarbeit</li>
             <li (click)="scrollToElementByButton('vermittlung')">Vermittlung</li>
-            <li (click)="scrollToElementByButton('contact')">Kontakt</li>
+            <li (click)="scrollToElementByButton('questions')">Q&A</li>
           </ul>
         </nav>
+        <button class="menu-button" (click)="handleMenuButtonClick()">
+          <app-icon [iconName]="'menu'" [iconColor]="'#fff'" [iconSize]="'4rem'"></app-icon>
+        </button>
       </div>
       <div>
         <p class="headline">Leistungen</p>
         <ul>
           <li>
-            <app-icon [iconName]="'check'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <app-icon [iconName]="'check'" [iconColor]="'#229954'" [iconSize]="'2.4rem'"></app-icon>
             <p>Für Unternehmen</p>
           </li>
           <li>
-            <app-icon [iconName]="'check'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <app-icon [iconName]="'check'" [iconColor]="'#229954'" [iconSize]="'2.4rem'"></app-icon>
             <p>Für Fachkräfte</p>
           </li>
           <li>
-            <app-icon [iconName]="'check'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <app-icon [iconName]="'check'" [iconColor]="'#229954'" [iconSize]="'2.4rem'"></app-icon>
             <p>Rechtssichere Vermittlung</p>
           </li>
           <li>
-            <app-icon [iconName]="'check'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
+            <app-icon [iconName]="'check'" [iconColor]="'#229954'" [iconSize]="'2.4rem'"></app-icon>
             <p>Integration Support</p>
           </li>
         </ul>
@@ -84,13 +100,13 @@
         <p class="headline">Kontakt</p>
         <ul>
           <li>
-            <app-icon [iconName]="'mail'" [iconColor]="'#65993E'" [iconSize]="'2.4rem'"></app-icon>
-            <p>info@chancengestalter.de</p>
+            <app-icon [iconName]="'mail'" [iconColor]="'#229954'" [iconSize]="'2.4rem'"></app-icon>
+            <p>chancengestalter@yahoo.com</p>
           </li>
           <li>
             <app-icon
               [iconName]="'phone_in_talk'"
-              [iconColor]="'#65993E'"
+              [iconColor]="'#229954'"
               [iconSize]="'2.4rem'"
             ></app-icon>
             <p>Mo-Fr, 9-17 Uhr</p>
@@ -98,20 +114,24 @@
           <li>
             <app-icon
               [iconName]="'location_on'"
-              [iconColor]="'#65993E'"
+              [iconColor]="'#229954'"
               [iconSize]="'2.4rem'"
             ></app-icon>
-            <p>Deutschland</p>
+            <p>
+              Vellbrüggener Straße 4, <br />
+              41469 Neuss
+            </p>
           </li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Chancen Gestalter GWS UG. Alle Rechte vorbehalten.</p>
+      <p>© 2026 ChancenGestalter GWS UG (haftungsbeschränkt). Alle Rechte vorbehalten.</p>
       <div class="contact-links">
-        <p>Datenschutz</p>
-        <p>Impressum</p>
-        <p>Satzung</p>
+        <p (click)="routing('datenschutz')">Datenschutz</p>
+        <!-- <p (click)="routing('impressum')">Impressum</p> todo: mit reinnehmen, sobald vollständig -->
+        <p (click)="downloadSatzung()">Satzung</p>
+        <p (click)="downloadAGBs()">AGBs</p>
       </div>
     </div>
   </footer>

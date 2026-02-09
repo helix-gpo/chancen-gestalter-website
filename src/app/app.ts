@@ -1,12 +1,12 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { Icon } from "./util/icon/icon";
+import { Icon } from './util/icon/icon';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Icon],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('chancen-gestalter-website');
@@ -40,11 +40,29 @@ export class App {
     }
   }
 
-  /* updateYear() {
+  updateYear() {
     const yearEl = document.querySelector('.year');
     const currentYear = new Date().getFullYear();
     if (yearEl) {
       yearEl.innerHTML = String(currentYear);
     }
-  } */
+  }
+
+  routing(url: string) {
+    this.router.navigate([url]).then(() => {
+      this.scrollToElement('header');
+    });
+  }
+
+  downloadSatzung() {
+    window.open('assets/satzung.pdf');
+  }
+
+  downloadAGBs() {
+    window.open('assets/AGBs.pdf');
+  }
+
+  handleMenuButtonClick() {
+    // todo: menu button
+  }
 }

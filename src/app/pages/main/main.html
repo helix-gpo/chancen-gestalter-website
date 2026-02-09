@@ -4,19 +4,20 @@
       <div class="overhead">
         <app-icon
           [iconName]="'check_circle'"
-          [iconColor]="'#65993E'"
+          [iconColor]="'#229954'"
           [iconSize]="'1.6rem'"
           class="overhead-icon"
         ></app-icon>
-        <span class="overhead-text">Rechtssichere Vermittlung</span>
+        <span class="overhead-text"
+          >Ihr Partner für berufliche Integration & medizinische Begleitung
+        </span>
       </div>
       <p class="title">
-        Internationale Fachkräfte <span class="right-secure">rechtssicher</span> nach Deutschland
-        vermitteln
+        Erfolgreich in Deutschland <span class="right-secure">ankommen und durchstarten</span>
       </p>
       <p class="description">
-        ChancenGestalter begleitet Unternehmen und qualifizierte Fachkräfte strukturiert von der
-        Auswahl über das Matching bis zur erfolgreichen Arbeitsaufnahme in Deutschland.
+        Wir begleiten internationale Fachkräfte, Arbeitgeber und Patienten auf ihrem Weg in
+        Deutschland - von der ersten Beratung bis zur erfolgreichen Integration.
       </p>
       <div class="button-links">
         <button class="button-link starten-link" (click)="scrollToElementByButton('contact')">
@@ -30,75 +31,63 @@
         <div class="top">
           <app-icon
             [iconName]="'verified_user'"
-            [iconColor]="'#65993E'"
+            [iconColor]="'#229954'"
             [iconSize]="'2.4rem'"
             class="values-icon"
           ></app-icon>
-          <p>Transparent, professionell und gesetzeskonform</p>
-        </div>
-        <div class="bottom">
-          <div class="security">
-            <app-icon
-              [iconName]="'person_shield'"
-              [iconColor]="'#65993E'"
-              [iconSize]="'4.8rem'"
-              class="values-icon"
-            ></app-icon>
-            <p>Rechtskonform</p>
-          </div>
-          <div class="international">
-            <app-icon
-              [iconName]="'language'"
-              [iconColor]="'#65993E'"
-              [iconSize]="'4.8rem'"
-              class="values-icon"
-            ></app-icon>
-            <p>International</p>
-          </div>
-          <div class="personal">
-            <app-icon
-              [iconName]="'group'"
-              [iconColor]="'#65993E'"
-              [iconSize]="'4.8rem'"
-              class="values-icon"
-            ></app-icon>
-            <p>Persönlich</p>
-          </div>
+          <p>
+            Keine versteckten Kosten <strong>•</strong> Persönliche Betreuung
+            <strong>•</strong> Mehrsprachige Unterstützung
+          </p>
         </div>
       </div>
     </div>
     <div class="hero-picture">
       <img class="hero-image" src="/images/hero-pic.png" alt="Helix GPO Hero Image" />
+      <div class="garant-secure">
+        <span class="garant-icon">
+          <app-icon
+            [iconName]="'group_add'"
+            [iconColor]="'#229954'"
+            [iconSize]="'3.2rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </span>
+        <div class="garant-text">
+          <p class="gar">100+</p>
+          <p class="sec">Erfolgreiche Vermittlungen</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="leistung-section" id="leistung">
   <div class="leistung-container">
-    <p class="headline-p">Unsere Leistungen</p>
+    <p class="headline-p">Unsere Leistungsbereiche</p>
     <h1 class="headline-text">
-      Wir bieten maßgeschneiderte Lösungen für Unternehmen und Fachkräfte
+      Maßgeschneiderte Unterstützung für drei Zielgruppen - professionell, persönlich und praxisnah.
     </h1>
     <div class="offers">
-      <div class="card left">
+      <div class="card left" (click)="handleLeistungCardClick('Fachkraft')">
         <div class="icon-container">
           <app-icon
-            [iconName]="'location_city'"
+            [iconName]="'supervisor_account'"
             [iconColor]="'#fff'"
             [iconSize]="'4rem'"
             class="overhead-icon"
           ></app-icon>
         </div>
-        <h2 class="card-title">Für Unternehmen</h2>
+        <h2 class="card-title">Für Fachkräfte</h2>
         <p class="card-description">
-          Wir unterstützen Sie bei der Gewinnung qualifizierter internationaler Arbeitskräfte und
-          übernehmen den gesamten Vermittlungsprozess.
+          Individuelle Begleitung bei Anerkennung, Qualifizierung, Bewerbung und Integration in
+          Deutschland.
         </p>
         <ul>
           <li>
             <app-icon
               [iconName]="'check_circle'"
-              [iconColor]="'#65993E'"
+              [iconColor]="'#ffd700'"
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
@@ -107,7 +96,7 @@
           <li>
             <app-icon
               [iconName]="'check_circle'"
-              [iconColor]="'#65993E'"
+              [iconColor]="'#ffd700'"
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
@@ -116,7 +105,7 @@
           <li>
             <app-icon
               [iconName]="'check_circle'"
-              [iconColor]="'#65993E'"
+              [iconColor]="'#ffd700'"
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
@@ -125,7 +114,7 @@
           <li>
             <app-icon
               [iconName]="'check_circle'"
-              [iconColor]="'#65993E'"
+              [iconColor]="'#ffd700'"
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
@@ -142,19 +131,81 @@
           ></app-icon>
         </div>
       </div>
-      <div class="card right">
+      <div class="card middle" (click)="handleLeistungCardClick('Arbeitgeber')">
         <div class="icon-container">
           <app-icon
-            [iconName]="'group'"
-            [iconColor]="'#1b2211'"
+            [iconName]="'location_city'"
+            [iconColor]="'#fff'"
             [iconSize]="'4rem'"
             class="overhead-icon"
           ></app-icon>
         </div>
-        <h2 class="card-title">Für Fachkräfte</h2>
+        <h2 class="card-title">Für Arbeitgeber</h2>
         <p class="card-description">
-          Wir begleiten Sie Schritt für Schritt auf Ihrem Weg zu einer qualifizierten Beschäftigung
-          in Deutschland.
+          Praxisnahe Entlastung bei der internationalen Fachkräftegewinnung mit strukturierter
+          Begleitung.
+        </p>
+        <ul>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Bedarfsanalyse und Anforderungsprofil</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Internationale Kanidatensuche</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Begleitung bei Visum und Behörden</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Integration und Onboarding-Support</p>
+          </li>
+        </ul>
+        <div class="request">
+          <p>Jetzt anfragen</p>
+          <app-icon
+            [iconName]="'arrow_right_alt'"
+            [iconColor]="'#65993E'"
+            [iconSize]="'2.8rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+      </div>
+      <div class="card right" (click)="handleLeistungCardClick('Patient')">
+        <div class="icon-container">
+          <app-icon
+            [iconName]="'person_heart'"
+            [iconColor]="'#fff'"
+            [iconSize]="'4rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+        <h2 class="card-title">Patientenbegleitung</h2>
+        <p class="card-description">
+          Umfassende Organisation und persönliche Begleitung für medizinische Behandlungen in
+          Deutschland.
         </p>
         <ul>
           <li>
@@ -198,7 +249,7 @@
           <p>Jetzt bewerben</p>
           <app-icon
             [iconName]="'arrow_right_alt'"
-            [iconColor]="'#ffd700'"
+            [iconColor]="'#229954'"
             [iconSize]="'2.8rem'"
             class="overhead-icon"
           ></app-icon>
@@ -210,89 +261,128 @@
 
 <section class="working-section" id="working">
   <div class="working-container">
-    <p class="headline-p">So funktioniert die Zusammenarbeit</p>
-    <h1 class="headline-text">
-      Ein strukturierter Prozess von der Anfrage bis zur erfolgreichen Arbeitsaufnahme
-    </h1>
-    <div class="working-steps">
-      <div class="step">
-        <span class="step-number">1</span>
-        <div class="step-content">
-          <span class="step-icon">
-            <app-icon
-              [iconName]="'forum'"
-              [iconColor]="'#65993E'"
-              [iconSize]="'3.6rem'"
-              class="overhead-icon"
-            ></app-icon>
-          </span>
-          <p class="step-title">Erstgespräch</p>
-          <p class="step-description">
-            Kostenlose Beratung zu Ihren Anforderungen, Zielen und dem weiteren Vorgehen.
-          </p>
-        </div>
+    <div class="working-content">
+      <div class="working-picture">
+        <img class="working-image" src="/images/about-us.png" alt="Helix GPO Hero Image" />
       </div>
-      <div class="step">
-        <span class="step-number">2</span>
-        <div class="step-content">
-          <span class="step-icon">
+      <div class="working-text">
+        <div class="why-cg">
+          <p>Warum ChancenGestalter?</p>
+        </div>
+        <h1 class="working-headline">
+          Ihr verlässlicher Partner für einen erfolgreichen Start in Deutschland
+        </h1>
+        <p class="working-description">
+          Mit langjähriger Erfahrung und einem tiefen Verständnis für die Herausforderungen
+          internationaler Integration bieten wir Ihnen maßgeschneiderte Lösungen.
+        </p>
+        <ul class="working-points">
+          <li>
             <app-icon
-              [iconName]="'search'"
-              [iconColor]="'#65993E'"
-              [iconSize]="'3.6rem'"
+              [iconName]="'partner_exchange'"
+              [iconColor]="'#229954'"
+              [iconSize]="'2.8rem'"
               class="overhead-icon"
             ></app-icon>
-          </span>
-          <p class="step-title">Auswahl & Matching</p>
-          <p class="step-description">
-            Gezielte Suche und Prüfung von Kandidaten anhand Ihrer Anforderungen.
-          </p>
-        </div>
-      </div>
-      <div class="step">
-        <span class="step-number">3</span>
-        <div class="step-content">
-          <span class="step-icon">
+            <div class="point-text">
+              <h1>Persönliche Betreuung</h1>
+              <p>Individuelle Begleitung mit festem Ansprechpartner durch alle Prozesse</p>
+            </div>
+          </li>
+          <li>
             <app-icon
-              [iconName]="'contract'"
-              [iconColor]="'#65993E'"
-              [iconSize]="'3.6rem'"
+              [iconName]="'dictionary'"
+              [iconColor]="'#229954'"
+              [iconSize]="'2.8rem'"
               class="overhead-icon"
             ></app-icon>
-          </span>
-          <p class="step-title">Rechtliche Prüfung</p>
-          <p class="step-description">
-            Qualifikationsanerkennung, Visumsberatung und behördliche Begleitung.
-          </p>
-        </div>
-      </div>
-      <div class="step">
-        <span class="step-number">4</span>
-        <div class="step-content">
-          <span class="step-icon">
+            <div class="point-text">
+              <h1>Mehrsprachige Expertise</h1>
+              <p>Kommunikation in Ihrer Sprache für maximales Verständnis</p>
+            </div>
+          </li>
+          <li>
             <app-icon
-              [iconName]="'handshake'"
-              [iconColor]="'#65993E'"
-              [iconSize]="'3.6rem'"
+              [iconName]="'schedule'"
+              [iconColor]="'#229954'"
+              [iconSize]="'2.8rem'"
               class="overhead-icon"
             ></app-icon>
-          </span>
-          <p class="step-title">Arbeitsaufnahme</p>
-          <p class="step-description">
-            Unterstützung bei Einreise, Integration und erfolgreicher Arbeitsaufnahme.
-          </p>
-        </div>
+            <div class="point-text">
+              <h1>Effiziente Prozesse</h1>
+              <p>Strukturierte Abläufe sparen Zeit und vermeiden Fehler</p>
+            </div>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'verified_user'"
+              [iconColor]="'#229954'"
+              [iconSize]="'2.8rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <div class="point-text">
+              <h1>Rechtssichere Begleitung</h1>
+              <p>Kooperation mit spezialisierten Fachleuten bei Bedarf</p>
+            </div>
+          </li>
+        </ul>
+        <button class="working-button" (click)="scrollToElementByButton('zusammenarbeit')">
+          <p>Mehr erfahren</p>
+          <app-icon
+            [iconName]="'arrow_right_alt'"
+            [iconColor]="'#229954'"
+            [iconSize]="'2.4rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </button>
       </div>
     </div>
-    <div class="start-process-container">
-      <button class="start-process" (click)="scrollToElementByButton('contact')">
-        <span>Prozess starten</span>
+  </div>
+</section>
+
+<section class="zusammenarbeit-section" id="zusammenarbeit">
+  <div class="zusammenarbeit-container">
+    <p class="headline-p">So funktioniert die Zusammenarbeit</p>
+    <h1 class="headline-text">
+      Ihr Weg zu uns - transparent, strukturiert und auf Ihre Bedürfnisse zugeschnitten.
+    </h1>
+    <div class="steps">
+      <div class="step">
+        <div>1</div>
+        <h1>Erstgespräch</h1>
+        <p>Kostenlose Beratung zur Analyse Ihrer Situation und Ziele</p>
+      </div>
+      <div class="step">
+        <div>2</div>
+        <h1>Maßgeschneiderter Plan</h1>
+        <p>Wir erstellen einen individuellen Fahrplan für Ihren Erfolg</p>
+      </div>
+      <div class="step">
+        <div>3</div>
+        <h1>Aktive Begleitung</h1>
+        <p>Schritt für Schritt durch alle Behörden und Prozesse</p>
+      </div>
+      <div class="step">
+        <div>4</div>
+        <h1>Erfolgreicher Abschluss</h1>
+        <p>Ihr Ziel erreicht - mit langfristiger Unterstützung bei Bedarf</p>
+      </div>
+    </div>
+    <div class="ready-card">
+      <p class="card-headline-p">Bereit für den nächsten Schritt?</p>
+      <h1 class="card-headline-text">
+        Vereinbaren Sie jetzt Ihr kostenloses Erstgespräch und erfahren Sie, wie wir Sie
+        unterstützen können.
+      </h1>
+      <button class="ready-card-button" (click)="scrollToElementByButton('contact')">
+        <p>Jetzt Kontakt aufnehmen</p>
         <app-icon
-          [iconName]="'arrow_right_alt'"
+          [iconName]="'send'"
           [iconColor]="'#fff'"
-          [iconSize]="'2.8rem'"
+          [iconSize]="'2.4rem'"
           class="overhead-icon"
-        ></app-icon>
+        >
+        </app-icon>
       </button>
     </div>
   </div>
@@ -300,28 +390,11 @@
 
 <section class="vermittlung-section" id="vermittlung">
   <div class="vermittlung-container">
-    <div class="vermittlung-picture">
-      <img class="vermittlung-image" src="/images/vermittlung.png" alt="Helix GPO Hero Image" />
-      <div class="garant-secure">
-        <span class="garant-icon">
-          <app-icon
-            [iconName]="'verified_user'"
-            [iconColor]="'#fff'"
-            [iconSize]="'3.2rem'"
-            class="overhead-icon"
-          ></app-icon>
-        </span>
-        <div class="garant-text">
-          <p class="gar">Garantiert</p>
-          <p class="sec">Rechtssicher</p>
-        </div>
-      </div>
-    </div>
     <div class="vermittlung-text">
       <div class="overhead">
         <app-icon
           [iconName]="'balance'"
-          [iconColor]="'#65993E'"
+          [iconColor]="'#229954'"
           [iconSize]="'1.8rem'"
           class="overhead-icon"
         ></app-icon>
@@ -396,6 +469,124 @@
         ></app-icon>
       </button>
     </div>
+    <div class="vermittlung-picture">
+      <img class="vermittlung-image" src="/images/vermittlung.png" alt="Helix GPO Hero Image" />
+    </div>
+  </div>
+</section>
+
+<section class="questions-section" id="questions">
+  <div class="questions-container">
+    <div class="left">
+      <div class="overhead">
+        <app-icon
+          [iconName]="'balance'"
+          [iconColor]="'#ffd700'"
+          [iconSize]="'1.8rem'"
+          class="overhead-icon"
+        ></app-icon>
+        <span class="overhead-text">Häufig gestellte Fragen</span>
+      </div>
+      <h1>Haben Sie Fragen?</h1>
+      <p>
+        Hier finden Sie schnelle Antworten auf die häufigsten Fragen. Für weitere Informationen
+        stehen wir Ihnen gerne persönlich zur Verfügung.
+      </p>
+      <div class="questions-picture">
+        <img src="/images/q&a.png" alt="FAQ Illustration" />
+      </div>
+    </div>
+    <div class="right">
+      <div class="item" (click)="open1 = !open1">
+        <div>
+          <h2>Wie lange dauert der Anerkennungsprozess für ausländische Qualifikationen?</h2>
+          <app-icon
+            [iconName]="'keyboard_arrow_down'"
+            [iconColor]="'#229954'"
+            [iconSize]="'3.2rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+        @if (open1) {
+          <p>
+            Die Dauer variiert je nach Beruf und Herkunftsland zwischen 3 und 12 Monaten. Wir
+            beschleunigen den Prozess durch vollständige Vorbereitung aller Unterlagen und direkte
+            Kommunikation mit den zuständigen Stellen.
+          </p>
+        }
+      </div>
+      <div class="item" (click)="open2 = !open2">
+        <div>
+          <h2>Welche Kosten entstehen für Ihre Dienstleistungen?</h2>
+          <app-icon
+            [iconName]="'keyboard_arrow_down'"
+            [iconColor]="'#229954'"
+            [iconSize]="'3.2rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+        @if (open2) {
+          <p>
+            Das Erstgespräch ist immer kostenlos. Die weiteren Kosten richten sich nach dem
+            individuellen Leistungsumfang. Wir erstellen Ihnen ein transparentes Angebot ohne
+            versteckte Kosten.
+          </p>
+        }
+      </div>
+      <div class="item" (click)="open3 = !open3">
+        <div>
+          <h2>In welchen Sprachen können Sie beraten?</h2>
+          <app-icon
+            [iconName]="'keyboard_arrow_down'"
+            [iconColor]="'#229954'"
+            [iconSize]="'3.2rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+        @if (open3) {
+          <p>
+            Wir bieten mehrsprachige Beratung an, darunter Deutsch, Englisch und weitere Sprachen je
+            nach Bedarf. Kontaktieren Sie uns, um Ihre bevorzugte Sprache zu besprechen.
+          </p>
+        }
+      </div>
+      <div class="item" (click)="open4 = !open4">
+        <div>
+          <h2>Können Sie auch bei rechtlichen Fragen unterstützen?</h2>
+          <app-icon
+            [iconName]="'keyboard_arrow_down'"
+            [iconColor]="'#229954'"
+            [iconSize]="'3.2rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+        @if (open4) {
+          <p>
+            Wir erbringen selbst keine Rechtsberatung, arbeiten aber bei Bedarf mit qualifizierten
+            Rechtsanwälten und Fachanwälten zusammen, um Ihnen die bestmögliche Unterstützung zu
+            bieten.
+          </p>
+        }
+      </div>
+      <div class="item" (click)="open5 = !open5">
+        <div>
+          <h2>Wie läuft die Patientenbegleitung für medizinische Behandlungen ab?</h2>
+          <app-icon
+            [iconName]="'keyboard_arrow_down'"
+            [iconColor]="'#229954'"
+            [iconSize]="'3.2rem'"
+            class="overhead-icon"
+          ></app-icon>
+        </div>
+        @if (open5) {
+          <p>
+            Wir organisieren die gesamte Reise von der Klinikauswahl über Visa und Unterkunft bis
+            zur Nachsorge. Sie erhalten einen persönlichen Betreuer, der Sie während des gesamten
+            Aufenthalts begleitet und sprachlich unterstützt.
+          </p>
+        }
+      </div>
+    </div>
   </div>
 </section>
 
@@ -405,19 +596,18 @@
       <p class="contact-headline">Bereit für den nächsten Schritt?</p>
       <p class="contact-description">
         Ob Sie als Unternehmen qualifizierte Fachkräfte suchen oder als internationale Fachkraft
-        Ihre Karriere in Deutschland starten möchten - wir begleiten Sie professionell und
-        zuverlässig.
+        Ihre Karriere in starten möchten - wir begleiten Sie professionell und zuverlässig.
       </p>
       <div class="contact-buttons">
-        <button class="cta-button">
+        <button class="cta-button" (click)="handleCallClick()">
           <app-icon
             [iconName]="'phone_in_talk'"
-            [iconColor]="'#65993E'"
+            [iconColor]="'#229954'"
             [iconSize]="'2.4rem'"
           ></app-icon>
           <p>Kontakt aufnehmen</p>
         </button>
-        <button class="email-button">
+        <button class="email-button" (click)="handleSendMailClick()">
           <app-icon
             [iconName]="'mail'"
             [iconColor]="'#fff'"
@@ -461,7 +651,7 @@
     <div class="contact-form">
       <div class="header">
         <span class="contact-icon-container">
-          <app-icon [iconName]="'send'" [iconColor]="'#65993E'" [iconSize]="'4rem'"></app-icon>
+          <app-icon [iconName]="'send'" [iconColor]="'#229954'" [iconSize]="'4rem'"></app-icon>
         </span>
         <p class="form-headline">Kostenlose Erstberatung</p>
         <p class="form-text">Schildern Sie uns Ihr Anliegen - wir melden uns zeitnah bei Ihnen.</p>
@@ -481,10 +671,11 @@
         </div>
         <div class="field choice">
           <p>Ich bin interessiert als *</p>
-          <select class="dropdown">
+          <select class="dropdown" id="targetSelect" [(ngModel)]="choice">
             <option>Bitte auswählen</option>
-            <option>Unternehmen</option>
             <option>Fachkraft</option>
+            <option>Arbeitgeber</option>
+            <option>Patient</option>
           </select>
         </div>
         <div class="field message">

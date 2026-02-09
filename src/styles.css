@@ -33,8 +33,26 @@ html {
   overflow-x: hidden;
 }
 
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 27em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
-  font-family: "Rubik", sans-serif !important;
+  font-family: 'Rubik', sans-serif !important;
   line-height: 1;
   font-weight: 400;
   color: var(--main-text-color-dark);
@@ -53,11 +71,15 @@ input {
 }
 
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 24;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 24;
 }
 
 .material-symbols-outlined {
-  font-family: "Material Symbols Outlined";
+  font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -72,30 +94,35 @@ input {
 
 :root {
   --main-accent-yellow: #ffd700;
-  --main-accent-green: #65993E;
+  --main-accent-green: #229954;
   --main-background-white: #fff;
-  --main-background-green: #f0f5eb;
-  --main-background-dark: #1E1E1E;
-  --second-background-green: #d4e5cd;
+  --main-background-green: #e9f5ee;
+  --main-background-dark: #1e1e1e;
+  --second-background-green: #e9f5ee;
+  --third-background-green: #38a365;
+  --third-background-green-hover: #4ead76;
 
   --main-text-color-light: #fff;
-  --main-text-color-grey: #333;
-  --main-text-color-dark: #1b2211;
-  --main-text-color-footer: #a5a5a5;
+  --main-text-color-dark-grey: #959595;
+  --main-text-color-grey: #959595;
+  --main-text-color-dark: #030f08;
+  --main-text-color-footer: #959595;
 
-  --dark-text-hover: #74a351;
-  --dark-text-active: #65993E;
+  --dark-text-hover: #229954;
+  --dark-text-active: #1b7a43;
 
   --main-border-color: #ced3ca;
 
   --white-shadow-color: #b3b3b3;
-  --main-white-hover: #e7eedd;
-  --main-white-active: #dae5cc;
+  --dark-shadow-color: #1e1e1e;
+  --main-white-hover: #d3ebdd;
+  --main-white-active: #bde0cc;
 
-  --green-shadow-color: #506533;
-  --main-accent-green-hover: #5b8a38;
-  --main-accent-green-active: #517a32;
+  --yellow-shadow-color: #fff7cc;
+  --green-shadow-color: #186b3b;
+  --main-accent-green-hover: #1f8a4c;
+  --main-accent-green-active: #1b7a43;
 
-  --contact-icon-green: #84ad65;
-  --contact-text-color-green: #d4e5cd;
+  --contact-icon-green: #4ead76;
+  --contact-text-color-green: #bde0cc;
 }

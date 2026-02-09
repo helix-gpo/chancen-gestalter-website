@@ -1,15 +1,24 @@
 import { Component, inject } from '@angular/core';
 import { Icon } from '../../util/icon/icon';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
-  imports: [Icon],
+  imports: [Icon, FormsModule],
   templateUrl: './main.html',
   styleUrl: './main.css',
 })
 export class Main {
   private router: Router = inject(Router);
+
+  open1 = false;
+  open2 = false;
+  open3 = false;
+  open4 = false;
+  open5 = false;
+
+  choice = 'Bitte auswählen';
 
   scrollToElementByButton(elementId: string) {
     const currentUrl = this.router.url;
@@ -32,5 +41,22 @@ export class Main {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  handleLeistungCardClick(leistung: string) {
+    this.choice = leistung;
+
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  handleCallClick() {
+    window.location.href = 'tel:+4921379282040';
+  }
+
+  handleSendMailClick() {
+    window.location.href = 'mailto:chancengestalter@yahoo.com';
   }
 }

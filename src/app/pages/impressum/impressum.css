@@ -1,0 +1,65 @@
+.impressum-section {
+  padding: 12rem 0;
+  width: 100%;
+
+  background: linear-gradient(
+    45deg,
+    var(--main-background-white) 85%,
+    var(--yellow-shadow-color) 99%
+  );
+}
+
+.impressum-container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  width: 100%;
+  line-height: 1.4;
+}
+
+.headline-p {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+
+.headline-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 4.8rem;
+  color: var(--main-text-color-dark-grey);
+}
+
+.d-headline {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.d-second-headline {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+  margin-top: 2rem;
+  color: var(--main-text-color-dark-grey);
+  text-align: justify;
+}
+
+.d-headline-text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.2;
+  color: var(--main-text-color-dark-grey);
+  text-align: justify;
+}
+
+.i-list {
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.2;
+  color: var(--main-text-color-dark-grey);
+  text-align: justify;
+  margin: 0.8rem 0;
+}
