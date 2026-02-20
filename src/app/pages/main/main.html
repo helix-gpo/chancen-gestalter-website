@@ -91,7 +91,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Bedarfsanalyse und Anforderungsprofil</p>
+            <p>Beratung zum Arbeitsmarkt und zu Beschäftigungsmöglichkeiten</p>
           </li>
           <li>
             <app-icon
@@ -100,7 +100,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Internationale Kanidatensuche</p>
+            <p>Unterstützung bei Bewerbungen und beruflicher Qualifizierung</p>
           </li>
           <li>
             <app-icon
@@ -109,7 +109,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Begleitung bei Visum und Behörden</p>
+            <p>Hilfe bei der Anerkennung ausländischer Berufs- und Hochschulabschlüsse</p>
           </li>
           <li>
             <app-icon
@@ -118,7 +118,16 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Integration und Onboarding-Support</p>
+            <p>Begleitung bei Visa- und Aufenthaltsanträgen</p>
+          </li>
+          <li>
+            <app-icon
+              [iconName]="'check_circle'"
+              [iconColor]="'#ffd700'"
+              [iconSize]="'2.4rem'"
+              class="overhead-icon"
+            ></app-icon>
+            <p>Betreuung im beruflichen und sozialen Integrationsprozess</p>
           </li>
         </ul>
         <div class="request">
@@ -153,7 +162,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Bedarfsanalyse und Anforderungsprofil</p>
+            <p>Informationen zu gesetzlichen Vorgaben</p>
           </li>
           <li>
             <app-icon
@@ -162,7 +171,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Internationale Kanidatensuche</p>
+            <p>⁠Förderprogramme & finanzielle Zuschüsse</p>
           </li>
           <li>
             <app-icon
@@ -171,16 +180,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Begleitung bei Visum und Behörden</p>
-          </li>
-          <li>
-            <app-icon
-              [iconName]="'check_circle'"
-              [iconColor]="'#ffd700'"
-              [iconSize]="'2.4rem'"
-              class="overhead-icon"
-            ></app-icon>
-            <p>Integration und Onboarding-Support</p>
+            <p>Integration & Onboarding-Beratung</p>
           </li>
         </ul>
         <div class="request">
@@ -215,7 +215,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Qualifikationsprüfung und Anerkennung</p>
+            <p>Organisation der Hin- und Rückkehr</p>
           </li>
           <li>
             <app-icon
@@ -224,7 +224,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Matching mit passenden Arbeitgebern</p>
+            <p>Medizinische und organisatorische Vorbereitung</p>
           </li>
           <li>
             <app-icon
@@ -233,7 +233,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Unterstützung im Visumverfahren</p>
+            <p>Medizinische Begleitung & Kommunikationshilfe</p>
           </li>
           <li>
             <app-icon
@@ -242,7 +242,7 @@
               [iconSize]="'2.4rem'"
               class="overhead-icon"
             ></app-icon>
-            <p>Beratung zu Einreise und Wohnungssuche</p>
+            <p>Alltagsorganisation</p>
           </li>
         </ul>
         <div class="request">
@@ -400,7 +400,7 @@
         ></app-icon>
         <span class="overhead-text">Transparenz & Compliance</span>
       </div>
-      <p class="title">Rechtssichere und transparente Vermittlung</p>
+      <p class="title">Rechtssichere und transparente Koordination</p>
       <p class="description">
         Als professioneller Vermittlungspartner legen wir größten Wert auf gesetzeskonforme
         Prozesse, Transparenz und Vertrauen. Alle Schritte erfolgen nach deutschem Recht und
@@ -419,8 +419,7 @@
           <div class="point-text">
             <p class="point-headline">Gesetzeskonform</p>
             <p class="point-description">
-              Alle Vermittlungen erfolgen im Einklang mit dem Arbeitnehmerüberlassungsgesetz (AÜG)
-              und dem Fachkräfteeinwanderungsgesetz.
+              Alle Leistungen erfolgen Rechtskonform nach dem Fachkräfteeinwanderungsgesetz.
             </p>
           </div>
         </div>
@@ -436,8 +435,8 @@
           <div class="point-text">
             <p class="point-headline">Geprüfte Qualifikationen</p>
             <p class="point-description">
-              Alle Fachkräfte durchlaufen eine umfassende Qualifikationsprüfung und Anerkennung
-              ihrer Abschlüsse.
+              Alle Fachkrafte verfügen über anerkannte Qualifikationen und durchlaufen eine
+              entsprechende Prüfung ihrer Abschlüsse.
             </p>
           </div>
         </div>
@@ -497,7 +496,7 @@
       </div>
     </div>
     <div class="right">
-      <div class="item" (click)="open1 = !open1">
+      <div class="item" [class.open]="open1" (click)="open1 = !open1">
         <div>
           <h2>Wie lange dauert der Anerkennungsprozess für ausländische Qualifikationen?</h2>
           <app-icon
@@ -509,13 +508,13 @@
         </div>
         @if (open1) {
           <p>
-            Die Dauer variiert je nach Beruf und Herkunftsland zwischen 3 und 12 Monaten. Wir
-            beschleunigen den Prozess durch vollständige Vorbereitung aller Unterlagen und direkte
-            Kommunikation mit den zuständigen Stellen.
+            Die Dauer des Anerkennungsprozesses für ausländische Qualifikationen hängt von
+            Abschlussart, Bundesland und zuständiger Stelle ab und beträgt im Durchschnitt 3-8
+            Monate.
           </p>
         }
       </div>
-      <div class="item" (click)="open2 = !open2">
+      <div class="item" [class.open]="open2" (click)="open2 = !open2">
         <div>
           <h2>Welche Kosten entstehen für Ihre Dienstleistungen?</h2>
           <app-icon
@@ -533,7 +532,7 @@
           </p>
         }
       </div>
-      <div class="item" (click)="open3 = !open3">
+      <div class="item" [class.open]="open3" (click)="open3 = !open3">
         <div>
           <h2>In welchen Sprachen können Sie beraten?</h2>
           <app-icon
@@ -545,12 +544,12 @@
         </div>
         @if (open3) {
           <p>
-            Wir bieten mehrsprachige Beratung an, darunter Deutsch, Englisch und weitere Sprachen je
-            nach Bedarf. Kontaktieren Sie uns, um Ihre bevorzugte Sprache zu besprechen.
+            Wir bieten mehrsprachige Beratung an, darunter Deutsch, Englisch, Arabisch und weitere
+            Sprachen je nach Bedarf. Kontaktieren Sie uns, um Ihre bevorzugte Sprache zu besprechen.
           </p>
         }
       </div>
-      <div class="item" (click)="open4 = !open4">
+      <div class="item" [class.open]="open4" (click)="open4 = !open4">
         <div>
           <h2>Können Sie auch bei rechtlichen Fragen unterstützen?</h2>
           <app-icon
@@ -568,7 +567,7 @@
           </p>
         }
       </div>
-      <div class="item" (click)="open5 = !open5">
+      <div class="item" [class.open]="open5" (click)="open5 = !open5">
         <div>
           <h2>Wie läuft die Patientenbegleitung für medizinische Behandlungen ab?</h2>
           <app-icon

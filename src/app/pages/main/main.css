@@ -328,6 +328,8 @@ section {
 }
 
 .request {
+  margin-top: auto;
+
   font-size: 1.6rem;
   font-weight: 500;
   transition: all 0.3s;
@@ -891,6 +893,10 @@ section {
   border-radius: 1.2rem;
   box-shadow: 0rem 0.2rem 0.4rem 0.02rem var(--white-shadow-color);
   transition: all 0.3s;
+}
+
+.questions-container .right .item.open .overhead-icon {
+  transform: rotate(180deg);
 }
 
 .questions-container .right .item:hover {
