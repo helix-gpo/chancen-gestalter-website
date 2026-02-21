@@ -17,6 +17,34 @@
   line-height: 1.4;
 }
 
+.header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.back-button {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: var(--main-accent-yellow);
+  color: var(--main-text-color-dark);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0rem 0.2rem 0.8rem 0.2rem var(--yellow-shadow-color);
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background-color: var(--yellow-bg-hover);
+}
+
+.back-button:active {
+  background-color: var(--yellow-bg-active);
+}
+
 .headline-p {
   font-size: 4rem;
   font-weight: 500;

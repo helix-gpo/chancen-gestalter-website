@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-impressum',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './impressum.css',
 })
 export class Impressum {
+  private router: Router = inject(Router);
 
+  goBack() {
+    this.router.navigate(['/']);
+  }
 }

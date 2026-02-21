@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-datenschutz',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './datenschutz.css',
 })
 export class Datenschutz implements OnInit {
+  private router: Router = inject(Router);
   currentDate: String = '';
 
   ngOnInit(): void {
@@ -27,5 +29,9 @@ export class Datenschutz implements OnInit {
     });
 
     return formatter.format(date);
+  }
+
+  goBack() {
+    this.router.navigate(['/']);
   }
 }

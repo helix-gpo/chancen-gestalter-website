@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { Icon } from '../../util/icon/icon';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class Main {
   private router: Router = inject(Router);
+
+  @ViewChild('nameInput') nameInput!: ElementRef<HTMLInputElement>;
 
   open1 = false;
   open2 = false;
