@@ -1,6 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { Icon } from './util/icon/icon';
+import { MatDialog } from '@angular/material/dialog';
+import { MenuModal } from './util/menu-modal/menu-modal';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +13,7 @@ import { Icon } from './util/icon/icon';
 export class App {
   protected readonly title = signal('chancen-gestalter-website');
 
+  private dialog: MatDialog = inject(MatDialog);
   private router: Router = inject(Router);
 
   ngOnInit() {
@@ -63,6 +66,14 @@ export class App {
   }
 
   handleMenuButtonClick() {
-    // todo: menu button
+    let dialogRef = this.dialog.open(MenuModal, {
+      panelClass: 'menu-modal',
+    });
+
+    if (dialogRef) {
+      dialogRef.afterClosed().subscribe((element) => {
+        this.scrollToElementByButton(element);
+      });
+    }
   }
 }

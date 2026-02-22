@@ -47,7 +47,7 @@ html {
 
 @media (max-width: 27em) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 
@@ -128,4 +128,33 @@ input {
 
   --contact-icon-green: #4ead76;
   --contact-text-color-green: #bde0cc;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--main-accent-green);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-accent-green);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-accent-green-hover);
+  cursor: pointer;
+}
+
+/* Modal Class */
+.menu-modal {
+  width: 100%;
+  height: 100%;
 }

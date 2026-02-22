@@ -212,6 +212,13 @@ section {
   }
 }
 
+@media (max-width: 52em) {
+  .hero-picture img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .garant-secure {
   position: absolute;
   bottom: -2.4rem;
