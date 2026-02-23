@@ -1,5 +1,4 @@
 To Do's:
 
-- App-Icon im Browser ändern
 - Impressum (Handelsregister HRB-Nummer)
-- Kontaktformular n8n
+- Kontaktformular n8n (mit Toaster)
