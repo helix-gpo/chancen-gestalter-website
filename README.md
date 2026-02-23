@@ -1,6 +1,5 @@
 To Do's:
 
-- Impressum (Vervollständigen - fehlenden Daten: Handlesregister (+ HRB-Nr.), Nummer ändern)
+- App-Icon im Browser ändern
+- Impressum (Handelsregister HRB-Nummer)
 - Kontaktformular n8n
-- Hosting
-- Hosting mit Domain

@@ -55,7 +55,7 @@ export class Main {
   }
 
   handleCallClick() {
-    window.location.href = 'tel:+4921379282040';
+    window.location.href = 'tel:+491773830074';
   }
 
   handleSendMailClick() {
