@@ -658,19 +658,46 @@
       </div>
       <div class="fields">
         <div class="field name">
-          <p>Name *</p>
-          <input #nameInput />
+          <div class="warning-header">
+            <p>Name *</p>
+            @if (showNameWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+            }
+          </div>
+          <input #nameInput [(ngModel)]="nameInputValue" />
         </div>
         <div class="field email">
-          <p>E-Mail *</p>
-          <input />
+          <div class="warning-header">
+            <p>E-Mail *</p>
+            @if (showEmailWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+            }
+          </div>
+          <input #emailInput [(ngModel)]="emailInputValue" />
         </div>
         <div class="field phone">
           <p>Telefon</p>
-          <input />
+          <input #phoneInput [(ngModel)]="phoneInputValue" />
         </div>
         <div class="field choice">
-          <p>Ich bin interessiert als *</p>
+          <div class="warning-header">
+            <p>Ich bin interessiert als *</p>
+            @if (showChoiceWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+            }
+          </div>
           <select class="dropdown" id="targetSelect" [(ngModel)]="choice">
             <option>Bitte auswählen</option>
             <option>Fachkraft</option>
@@ -679,12 +706,39 @@
           </select>
         </div>
         <div class="field message">
-          <p>Ihre Nachricht *</p>
-          <textarea></textarea>
+          <div class="warning-header">
+            <p>Ihre Nachricht *</p>
+            @if (showMessageWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+            }
+          </div>
+          <textarea #messageInput [(ngModel)]="messageInputValue"></textarea>
         </div>
-        <button class="form-button">
+        @if (showErrorMessageText) {
+          <p class="error-text">Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.</p>
+        }
+        @if (showSuccessMessageText) {
+          <p class="success-text">Ihre Nachricht wurde erfolgreich gesendet!</p>
+        }
+        @if (showWarningMessageText) {
+          <p class="warning-text">Bitte füllen Sie alle Pflichtfelder aus!</p>
+        }
+        <button class="form-button" (click)="handleSendContactFormClick()">
           <p>Nachricht senden</p>
-          <app-icon [iconName]="'send'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+          @if (!sendingForm) {
+            <app-icon [iconName]="'send'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+          } @else {
+            <app-icon
+              [iconName]="'progress_activity'"
+              [iconColor]="'#ffffff'"
+              [iconSize]="'2.4rem'"
+              class="loading-spinner"
+            ></app-icon>
+          }
         </button>
         <span class="data-security">
           <app-icon [iconName]="'lock'" [iconColor]="'#1b2211'" [iconSize]="'2rem'"></app-icon>

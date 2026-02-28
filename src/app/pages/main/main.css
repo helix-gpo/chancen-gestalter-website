@@ -1187,6 +1187,33 @@ section {
   background-color: var(--main-accent-green-active);
 }
 
+.warning-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.error-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--error-text-color);
+  text-align: center;
+}
+
+.success-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--success-text-color);
+  text-align: center;
+}
+
+.warning-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--warning-text-color);
+  text-align: center;
+}
+
 .data-security {
   margin-top: -0.8rem;
   font-size: 1.4rem;
@@ -1197,6 +1224,16 @@ section {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 52em) {
