@@ -17,7 +17,7 @@
       </p>
       <p class="description">
         Wir begleiten internationale Fachkräfte, Arbeitgeber und Patienten auf ihrem Weg in
-        Deutschland - von der ersten Beratung bis zur erfolgreichen Integration.
+        Deutschland - von der ersten Beratung bis zur umfassenden Unterstützung vor Ort.
       </p>
       <div class="button-links">
         <button class="button-link starten-link" (click)="scrollToElementByButton('contact')">
@@ -55,7 +55,7 @@
         </span>
         <div class="garant-text">
           <p class="gar">100+</p>
-          <p class="sec">Erfolgreiche Vermittlungen</p>
+          <p class="sec">Erfolgreiche Begleitungen</p>
         </div>
       </div>
     </div>
@@ -402,8 +402,8 @@
       </div>
       <p class="title">Rechtssichere und transparente Koordination</p>
       <p class="description">
-        Als professioneller Vermittlungspartner legen wir größten Wert auf gesetzeskonforme
-        Prozesse, Transparenz und Vertrauen. Alle Schritte erfolgen nach deutschem Recht und
+        Als professioneller Beratungspartner legen wir größten Wert auf gesetzeskonforme Prozesse,
+        Transparenz und Vertrauen. Alle Schritte erfolgen in Übereinstimmung mit deutschem Recht und
         internationalen Standards.
       </p>
       <div class="points">
@@ -435,8 +435,7 @@
           <div class="point-text">
             <p class="point-headline">Geprüfte Qualifikationen</p>
             <p class="point-description">
-              Alle Fachkrafte verfügen über anerkannte Qualifikationen und durchlaufen eine
-              entsprechende Prüfung ihrer Abschlüsse.
+              Alle Fachkrafte mit anerkannten Qualifikationen - sind offiziell geprüfte Abschlüsse.
             </p>
           </div>
         </div>
@@ -508,9 +507,8 @@
         </div>
         @if (open1) {
           <p>
-            Die Dauer des Anerkennungsprozesses für ausländische Qualifikationen hängt von
-            Abschlussart, Bundesland und zuständiger Stelle ab und beträgt im Durchschnitt 3-8
-            Monate.
+            Wie lange die Anerkennung ausländischer Qualifikationen dauert, hängt von Abschlussart,
+            Bundesland und zuständiger Stelle ab - in der Regel 3 bis 8 Monate.
           </p>
         }
       </div>
@@ -544,8 +542,9 @@
         </div>
         @if (open3) {
           <p>
-            Wir bieten mehrsprachige Beratung an, darunter Deutsch, Englisch, Arabisch und weitere
-            Sprachen je nach Bedarf. Kontaktieren Sie uns, um Ihre bevorzugte Sprache zu besprechen.
+            Wir bieten mehrsprachige Beratung an, unter anderem in Deutsch, Englisch und Arabisch -
+            weitere Sprachen je nach Bedarf. Kontaktieren Sie uns gerne, um Ihre bevorzugte Sprache
+            zu besprechen.
           </p>
         }
       </div>
@@ -561,9 +560,8 @@
         </div>
         @if (open4) {
           <p>
-            Wir erbringen selbst keine Rechtsberatung, arbeiten aber bei Bedarf mit qualifizierten
-            Rechtsanwälten und Fachanwälten zusammen, um Ihnen die bestmögliche Unterstützung zu
-            bieten.
+            Wir bieten keine eigene Rechtsberatung an, beziehen diese falls erforderlich ein, um Sie
+            optimal zu unterstützen.
           </p>
         }
       </div>
@@ -579,7 +577,7 @@
         </div>
         @if (open5) {
           <p>
-            Wir organisieren die gesamte Reise von der Klinikauswahl über Visa und Unterkunft bis
+            Wir organisieren die gesamte Reise - von der Klinikauswahl über Visa und Unterkunft bis
             zur Nachsorge. Sie erhalten einen persönlichen Betreuer, der Sie während des gesamten
             Aufenthalts begleitet und sprachlich unterstützt.
           </p>
@@ -718,6 +716,45 @@
           </div>
           <textarea #messageInput [(ngModel)]="messageInputValue"></textarea>
         </div>
+        <div class="field datenschutz">
+          <div class="warning-header">
+            <p>Datenschutz *</p>
+            @if (showDatenschutzWarning) {
+              <app-icon
+                [iconName]="'exclamation'"
+                [iconColor]="'#D50000'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+            }
+          </div>
+          <div class="datenschutz-body">
+            <span class="datenschutz-text">
+              Ich akzeptiere die
+              <a href="/datenschutz" target="_blank" class="datenschutz-link"
+                >Datenschutzerklärung</a
+              >.
+            </span>
+            <input
+              type="checkbox"
+              id="datenschutzCheckbox"
+              class="checkbox"
+              [(ngModel)]="datenschutzChecked"
+            />
+            <label
+              for="datenschutzCheckbox"
+              class="checkbox"
+              title="Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage oder Bewerbung über das Kontaktformular, per WhatsApp oder per E-Mail zu. Ich kann meine Einwilligung jederzeit widerrufen."
+            >
+              @if (datenschutzChecked) {
+                <app-icon
+                  [iconName]="'check'"
+                  [iconColor]="'#229954'"
+                  [iconSize]="'2.4rem'"
+                ></app-icon>
+              }
+            </label>
+          </div>
+        </div>
         @if (showErrorMessageText) {
           <p class="error-text">Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.</p>
         }
@@ -742,7 +779,7 @@
         </button>
         <span class="data-security">
           <app-icon [iconName]="'lock'" [iconColor]="'#1b2211'" [iconSize]="'2rem'"></app-icon>
-          Ihre Daten werden vertraulich behandelt!
+          Ihre Daten werden vertraulich behandelt.
         </span>
       </div>
     </div>

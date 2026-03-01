@@ -1159,6 +1159,48 @@ section {
   height: 9.6rem;
 }
 
+.datenschutz-body {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--main-text-color-dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.datenschutz-link {
+  color: var(--main-accent-green);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.datenschutz-link:hover {
+  color: var(--main-accent-green-hover);
+}
+
+.datenschutz-link:active {
+  color: var(--main-accent-green-active);
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.checkbox {
+  height: 2.4rem;
+  width: 2.4rem;
+  min-width: 2.4rem;
+  border: 2px solid var(--main-accent-green);
+  border-radius: 0.4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .form-button {
   font-family: inherit;
   font-size: 1.6rem;

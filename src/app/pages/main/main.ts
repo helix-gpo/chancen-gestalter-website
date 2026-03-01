@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { Icon } from '../../util/icon/icon';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +13,7 @@ import { Contact } from '../../services/contact';
 export class Main {
   private router: Router = inject(Router);
   private contactService: Contact = inject(Contact);
+  private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
 
   @ViewChild('nameInput') nameInput!: ElementRef<HTMLInputElement>;
 
@@ -29,11 +30,13 @@ export class Main {
   phoneInputValue = '';
   choice = 'Bitte auswählen';
   messageInputValue = '';
+  datenschutzChecked = false;
 
   showNameWarning = false;
   showEmailWarning = false;
   showChoiceWarning = false;
   showMessageWarning = false;
+  showDatenschutzWarning = false;
 
   showSuccessMessageText = false;
   showErrorMessageText = false;
@@ -96,10 +99,12 @@ export class Main {
             this.showSuccessMessage();
             this.sendingForm = false;
             this.resetForm();
+            this.cdr.detectChanges();
           },
           error: (error) => {
             this.showErrorMessage();
             this.sendingForm = false;
+            this.cdr.detectChanges();
           },
         });
     } else {
@@ -112,12 +117,14 @@ export class Main {
     this.showEmailWarning = !this.emailInputValue.trim();
     this.showChoiceWarning = this.choice === 'Bitte auswählen';
     this.showMessageWarning = !this.messageInputValue.trim();
+    this.showDatenschutzWarning = !this.datenschutzChecked;
 
     return (
       !this.showNameWarning &&
       !this.showEmailWarning &&
       !this.showChoiceWarning &&
-      !this.showMessageWarning
+      !this.showMessageWarning &&
+      !this.showDatenschutzWarning
     );
   }
 
@@ -127,17 +134,27 @@ export class Main {
     this.phoneInputValue = '';
     this.choice = 'Bitte auswählen';
     this.messageInputValue = '';
+    this.datenschutzChecked = false;
   }
 
   private showSuccessMessage() {
+    this.showErrorMessageText = false;
+    this.showWarningMessageText = false;
+
     this.showSuccessMessageText = true;
   }
 
   private showErrorMessage() {
+    this.showSuccessMessageText = false;
+    this.showWarningMessageText = false;
+
     this.showErrorMessageText = true;
   }
 
   private showWarningMessage() {
+    this.showSuccessMessageText = false;
+    this.showErrorMessageText = false;
+
     this.showWarningMessageText = true;
   }
 }

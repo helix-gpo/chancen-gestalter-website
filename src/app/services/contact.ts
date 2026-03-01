@@ -12,7 +12,7 @@ export class Contact {
 
   private httpClient: HttpClient = inject(HttpClient);
 
-  sendContactForm(formData: ContactFormData): Observable<any> {
-    return this.httpClient.post(this.baseUrl, formData);
+  sendContactForm(formData: ContactFormData): Observable<ContactFormData> {
+    return this.httpClient.post<ContactFormData>(this.baseUrl, formData);
   }
 }
