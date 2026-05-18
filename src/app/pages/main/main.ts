@@ -79,7 +79,7 @@ export class Main {
   }
 
   handleSendMailClick() {
-    window.location.href = 'mailto:chancengestalter@yahoo.com';
+    window.location.href = 'mailto:chancengestalter@gmail.com';
   }
 
   handleSendContactFormClick() {
